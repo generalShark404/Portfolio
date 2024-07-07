@@ -1,0 +1,264 @@
+{% extends 'portfolio/base.html' %}
+{% load static%}
+
+{% block content%}
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="{% static 'portfolio/img/banner.jpg' %}" alt="" data-aos="fade-in" style="background-size: contain;">
+
+      <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+        <h2>I am Alamin Haidar Aliyu</h2>
+        <p class="text-small fs-6">Nice to meet you !</p>
+        <p><span class="typed" data-typed-items="Full Stack Developer, Cyber Security"></span></p>
+        <div class="mt-5">
+          <button class="btn btn-dark fs-3">Blog</button>
+          <button class="btn btn-warning text-light fs-3">Projects</button>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+         <div class="row">
+           <div class="col-md-6">
+             <div class="">
+   
+               <div class="row justify-content-between gy-4">
+                 <div class="col-lg-5">
+                   <img src="{% static 'portfolio/img/profile3.jpg' %}" class="img-fluid" alt="" style="background-size: cover; height: 300px;">
+                 </div>
+                 <div class="col-lg-7 about-info">
+                   <p><strong>Name: </strong> <span>Alamin Haidar Aliyu</span></p>
+                   <p><strong>Profile: </strong> <span>Full stack developer</span></p>
+                   <p><strong>Email: </strong> <span>alaminhaidaraliyu@gmail.com</span></p>
+                   <p><strong>Phone: </strong> <span>(234) 09066970703</span></p>
+                 </div>
+               </div>
+   
+               <div class="skills-content skills-animation">
+   
+                 <h5>Skills</h5>
+                 <div class="progress">
+                   <span class="skill"><span>JavaScript</span>
+                 </div><!-- End Skills Item -->
+   
+                 <div class="progress">
+                   <span class="skill"><span>Django</span> 
+                 </div><!-- End Skills Item -->
+   
+   
+                 <div class="progress">
+                   <span class="skill"><span>Python</span> 
+                 </div><!-- End Skills Item -->
+   
+                 <div class="progress">
+                   <span class="skill"><span>React</span> 
+                 </div><!-- End Skills Item -->
+   
+                 <div class="progress">
+                   <span class="skill"><span>React Native</span> 
+                   </div>
+                 </div><!-- End Skills Item -->
+   
+                 <div class="progress">
+                   <span class="skill"><span>Pentesting</span> 
+                 </div><!-- End Skills Item -->
+   
+               </div>
+             </div>
+   
+             <div class="col-md-6">
+               <div class="about-me">
+                 <h4>About me</h4>
+                 <p>
+                   
+                     I'm Alamin Haidar Aliyu, a seasoned full-stack engineer with expertise in Django, Python, Django Rest Framework, and React. I design and develop practical solutions with a focus on user experience and robust functionality. Passionate about my craft, I enjoy sharing knowledge and mentoring learners.
+                     I am also deeply passionate about cybersecurity and dedicated to developing secure applications that prioritize the protection of sensitive information and ensure the integrity of digital assets.
+                 </p>
+                 <p>
+                   My future aspirations include exploring AI and blockchain technologies. Outside of work, I enjoy outdoor activities like walking and cycling, and have a fascination with drones. I'm also a poetry enthusiast and karate practitioner.
+   
+                 </p>
+                 <p>                
+                 With a curiosity for the universe's workings, particularly electromagnetism, I often delve into physics and engineering books. I'm excited to continue learning and growing and is open to exploring new knowledge.
+                 </p>
+               </div>
+             </div>
+         </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-lock-fill"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Secure Application Development</h3>
+              </a>
+              <p class="bi bi-dot">Design and build secure applications to protect sensitive data.</p>
+              <p class="bi bi-dot">Design and build secure applications to protect sensitive data.</p>
+              <p class="bi bi-dot">Design and build secure applications to protect sensitive data.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-layers"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Full Stack Development</h3>
+              </a>
+              <p class="bi bi-dot">Build complete web applications from start to finish.</p>
+              <p class="bi bi-dot">Handle both front-end ( user-interface ) and backend ( server-side ) development.</p>
+              <p class="bi bi-dot">Create seamless user experience and functional applications.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-phone"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Mobile Application Development</h3>
+              </a>
+              <p class="bi bi-dot">Design and develop mobile apps for Android and IOS devices.</p>
+              <p class="bi bi-dot">Create user-friendly and intuitive mobile experiences.</p>
+              <p class="bi bi-dot">Build apps that are fast, secure, and easy to use.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+<section class="py-3 py-md-5 py-xl-8">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card border border-dark rounded shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <div class="row gy-3 gy-md-4 gy-lg-0">
+              <div class="col-12 col-lg-6 bsb-overlay background-position-center background-size-cover contact-background">
+                <div class="row align-items-lg-center justify-content-center h-100">
+                  <div class="col-11 col-xl-10">
+                    <div class="contact-info-wrapper py-4 py-xl-5">
+                      <h2 class="h1 mb-3 text-light">Get in touch</h2>
+                      <p class="lead fs-4 text-light opacity-75 mb-4 mb-xxl-5">I am always on the lookout to work with new clients. If your are interested in learning more about my services and how i can support your project, dont hesitate to contact.</p>
+                      <div class="d-flex mb-4 mb-xxl-5">
+                      </div>
+                      <div class="row mb-4 mb-xxl-5">
+                        <div class="col-12 col-xxl-6">
+                          <div class="d-flex mb-4 mb-xxl-0">
+                            <div class="me-4 text-primary">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-telephone-outbound" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h4 class="mb-3 text-light">Phone</h4>
+                              <p class="mb-0">
+                                <a class="link-light link-opacity-75 link-opacity-100-hover text-decoration-none" href="tel:+15057922430">(234) 09066970703</a>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-xxl-6">
+                          <div class="d-flex mb-0">
+                            <div class="me-4 text-primary">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
+                                <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z" />
+                                <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                              </svg>
+                            </div>
+                            <div>
+                              <h4 class="mb-3 text-light">E-Mail</h4>
+                              <p class="mb-0">
+                                <a class="link-light link-opacity-75 link-opacity-100-hover text-decoration-none" href="mailto:demo@yourdomain.com">alaminhaidaraliyu@gmail.com</a>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <div class="row align-items-lg-center h-100">
+                  <div class="col-12">
+                    <form action="#!">
+                      <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+                        <div class="col-12">
+                          <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                          <div class="input-group">
+                            <span class="input-group-text">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                              </svg>
+                            </span>
+                            <input type="email" class="form-control" id="email" name="email" value="" required>
+                          </div>
+                        </div>
+                        
+                        <div class="col-12">
+                          <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" id="subject" name="subject" value="" required>
+                        </div>
+                        <div class="col-12">
+                          <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                          <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                        </div>
+                        <div class="col-12">
+                          <div class="d-grid">
+                            <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </section>
+   <!-- /Contact Section -->
+
+  </main>
+{% endblock%}

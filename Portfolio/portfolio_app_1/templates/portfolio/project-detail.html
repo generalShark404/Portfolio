@@ -1,0 +1,100 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+       <div class="row">
+        <!-- {/* Image Start*/} -->
+        <!-- <div class="d-flex justify-content-center col-lg-6 col-md-4 col-sm-12 col-xs-12 h-50 mb-5 " -->
+          
+          <!-- <small class="text-small mb-5 mx-5 mt-1 bi bi-image "> project images</small> -->
+         <div
+          class="mb-0 col-sm-12 col-6 mx-5  rounded p-0 " style="display: flex;justify-content: center; align-items: center; box-shadow: 1px 1px 5px 1px grey; 
+          border-radius: 2px; height:300px; width: 300px; position: relative; overflow: scroll;" 
+           >
+            <img  style="max-height: 80%; position: sticky; top: 0; left: 0;" src="{% static 'portfolio/img/prepAcademia.jpg' %}" class="img-fluid " id="main-image"/>
+            <div class=" p-3" style="position: absolute; bottom: 0%;  display: flex; z-index: 5;" >
+              <img  style="height: 50px; width: 50px;" src="{% static 'portfolio/img/prepAcademia2.png' %}" class="me-1 side-image"/>
+              <img  style="height: 50px; width: 50px;" src="{% static 'portfolio/img/prepAcademia.jpg' %}" class="me-1 side-image"/>
+            </div>
+          </div> 
+        
+                 <!-- </div> -->
+                 <div class="col-md-6 mt-0 mb-5">
+                     <h2 class="fw-old fs-3">Learner Management System</h2>
+                     <p> This is a comprehensive learner management system web application designed to streamline course management and optimize learning experiences.
+                     </p>
+                     <p>
+                       <span class="fw-bold text-dark fs-6">Technologies :</span>
+                       <span>Bootstrap, React, Django, Django Rest Framework, JWT Tokens </span>
+                     </p>
+                     <p>
+                      <span class="fs-6 text-dark fw-bold">Status</span>:
+                      <span class="badge text-bg-danger me-3">Not hosted</span> 
+                      <a class="bi bi-github bg-dark text-light p-2 rounded cursor-pointer" > Source Code</a>
+                     </p>
+                     <div>
+                       <p class="fw-bold text-dark fs-5 mb-1">Features</p>
+                       <ul class="mt-0">
+                         <li>
+                           It has a student dashboard
+                         </li>
+                         <li>
+                           It has a student dashboard
+                         </li>
+                         <li>
+                           It has a student dashboard
+                         </li>
+                         <li>
+                           It has a student dashboard
+                         </li>
+                         <li>
+                           It has a student dashboard
+                         </li>
+                         <li>
+                           It has a student dashboard
+                         </li>
+                         <li>
+                           It has a student dashboard
+                         </li>
+                         <li>
+                           It has a student dashboard
+                         </li>
+                         <li>
+                           It has a student dashboard
+                         </li>
+                         <li>
+                           It has a student dashboard
+                         </li>
+                         <li>
+                           It has a student dashboard
+                         </li>
+                       </ul>
+                     </div>
+                     
+                 </div>
+          </div>
+        <!-- {/* Image End*/} -->
+       </div>
+<script>
+  
+  function changeImage(){
+    let mainImage = document.getElementById('main-image');
+    let sideImage = document.querySelectorAll('.side-image');
+    console.log(mainImage)
+    console.log(sideImage)
+
+    sideImage.forEach(img => {
+      img.onclick = (()=>{
+        mainImage.src = img.src;
+        console.log("clicked...")
+      });
+    });
+    }
+    changeImage();
+
+</script>
+{% endblock %}
+
+<!-- src={`${courseData.featured_thumbnail}`} -->
+<!-- style={containerStyle} -->
