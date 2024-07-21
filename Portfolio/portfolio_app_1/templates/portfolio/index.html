@@ -1,4 +1,4 @@
-{% extends 'portfolio/base.html' %}
+{% extends 'base.html' %}
 {% load static%}
 
 {% block content%}
@@ -14,8 +14,11 @@
         <p class="text-small fs-6">Nice to meet you !</p>
         <p><span class="typed" data-typed-items="Software Engineer, Full Stack Developer, Cyber Security"></span></p>
         <div class="mt-5">
-          <button class="btn btn-dark fs-3">Blog</button>
-          <button class="btn btn-warning text-light fs-3">Projects</button>
+          <a class="btn btn-primary fs-3" href="{% url 'blog:blog_posts' %}">Blog</a>
+          <a class="btn btn-warning text-light fs-3" href="/projects">Projects</a>
+          <a class="btn bi bi-github bg-dark text-light fs-3" href="{{ me.github }}"> 
+            Github
+          </a>
         </div>
       </div>
 
@@ -32,12 +35,15 @@
                <div class="row justify-content-between gy-4">
                  <div class="col-lg-5">
                    <img src="{% static 'portfolio/img/profile3.jpg' %}" class="img-fluid" alt="" style="background-size: cover; height: 300px;">
+                   
                  </div>
                  <div class="col-lg-7 about-info">
                    <p><strong>Name: </strong> <span>Alamin Haidar Aliyu</span></p>
                    <p><strong>Profile: </strong> <span>Full stack developer</span></p>
                    <p><strong>Email: </strong> <span>alaminhaidaraliyu@gmail.com</span></p>
-                   <p><strong>Phone: </strong> <span>(234) 09066970703</span></p>
+                   <p><strong>Phone: </strong> <span>(234) 09040335689</span></p>
+                   <a class="bi bi-linkedin fs-1 text-primary" href=""></a>
+                   <a class="bi bi-instagram fs-1 text-danger" href=""></a>
                  </div>
                </div>
    
@@ -48,6 +54,10 @@
                    <span class="skill"><span>JavaScript</span>
                  </div><!-- End Skills Item -->
    
+                 <div class="progress">
+                   <span class="skill"><span>Django</span> 
+                 </div><!-- End Skills Item -->
+                 
                  <div class="progress">
                    <span class="skill"><span>Django</span> 
                  </div><!-- End Skills Item -->
@@ -65,10 +75,13 @@
                    <span class="skill"><span>React Native</span> 
                    </div>
                  </div><!-- End Skills Item -->
-   
                  <div class="progress">
+                  <span class="skill"><span>API Development</span> 
+                </div><!-- End Skills Item -->
+   
+                 <!-- <div class="progress">
                    <span class="skill"><span>Pentesting</span> 
-                 </div><!-- End Skills Item -->
+                 </div>End Skills Item -->
    
                </div>
              </div>
@@ -78,15 +91,12 @@
                  <h4>About me</h4>
                  <p>
                    
-                     I'm Alamin Haidar Aliyu, a seasoned full-stack engineer with expertise in Django, Python, Django Rest Framework, and React. I design and develop practical solutions with a focus on user experience and robust functionality. Passionate about my craft, I enjoy sharing knowledge and mentoring learners.
+                     I'm Alamin Haidar Aliyu, a full-stack software engineer with expertise in Python, Django, Django Rest Framework, JavaScript, and React. I design and develop practical solutions with a focus on user experience and robust functionality. Passionate about my craft, I enjoy sharing knowledge.
                      I am also deeply passionate about cybersecurity and dedicated to developing secure applications that prioritize the protection of sensitive information and ensure the integrity of digital assets.
                  </p>
                  <p>
                    My future aspirations include exploring AI and blockchain technologies. Outside of work, I enjoy outdoor activities like walking and cycling, and have a fascination with drones. I'm also a poetry enthusiast and karate practitioner.
    
-                 </p>
-                 <p>                
-                 With a curiosity for the universe's workings, particularly electromagnetism, I often delve into physics and engineering books. I'm excited to continue learning and growing and is open to exploring new knowledge.
                  </p>
                </div>
              </div>
@@ -174,7 +184,7 @@
                   <div class="col-11 col-xl-10">
                     <div class="contact-info-wrapper py-4 py-xl-5">
                       <h2 class="h1 mb-3 text-light">Get in touch</h2>
-                      <p class="lead fs-4 text-light opacity-75 mb-4 mb-xxl-5">I am always on the lookout to work with new clients. If your are interested in learning more about my services and how i can support your project, dont hesitate to contact.</p>
+                      <p class="lead fs-4 text-light opacity-75 mb-4 mb-xxl-5">I am always on the lookout to work with new clients. If your are interested in learning more about my services and how i can support your project, don't hesitate to contact.</p>
                       <div class="d-flex mb-4 mb-xxl-5">
                       </div>
                       <div class="row mb-4 mb-xxl-5">
@@ -242,7 +252,7 @@
                         </div>
                         <div class="col-12">
                           <div class="d-grid">
-                            <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
+                            <button class="btn background text-light btn-lg" type="submit">Send Message</button>
                           </div>
                         </div>
                       </div>

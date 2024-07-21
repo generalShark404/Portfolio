@@ -97,7 +97,9 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
-
+.background{
+  background: var(--accent-color) !important;
+}
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -979,7 +981,6 @@ section,
   font-weight: 600;
   margin: 0 10px;
   line-height: 1;
-  text-transform: uppercase;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }

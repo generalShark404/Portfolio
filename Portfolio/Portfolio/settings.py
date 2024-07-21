@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-d*%#vbki)kue=611&p-e*a(a4!ybnxxzf4(=5*5xc&iw-v8xqk
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '6797-197-210-53-66.ngrok-free.app',
-    '127.0.0.1'
+    '127.0.0.1',
+    'd1f8-197-210-76-114.ngrok-free.app'
 ]
 
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfolio_app_1',
+    'blog'
 ]
 
 MIDDLEWARE = [
@@ -55,6 +56,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'Portfolio.urls'
+
 
 TEMPLATES = [
     {
@@ -80,8 +82,12 @@ WSGI_APPLICATION = 'Portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':'portfolio_db',
+        'USER':'root',
+        'HOST':'127.0.0.1',
+        'PASSWORD':'',
+        'PORT':'3306',
     }
 }
 
@@ -125,6 +131,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR, 'static'),
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

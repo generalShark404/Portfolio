@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% load custom_filters %}
+
+{% block content %}
+<div class="container">
+    <div class="row gx-4 d-flex justify-content-center">
+        <h1 class="text-center fw-bold mt-5 mb-4">My Blogs</h1>
+        <div class="col-lg-3 col-md-4 col-10 mb-3">
+            {% for blog in blogs %}
+            <div class="card">
+                <img src="{{ blog.blog_img.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">{{ blog.title }}</h5>
+                  <p class="card-text">
+                    {{ blog.text | truncate_words:10 }}
+                  </p>
+                  <p>
+                    <span class="badge text-bg-warning">Data Strcutures and Algorithm</span>
+                  </p>
+                  <a href="blog-detail/{{blog.title}}/{{blog.id}}" class="btn background d-flex justify-content-center text-light">Read</a>
+                </div>
+              </div>
+              {% endfor %}
+        </div>
+    </div>
+</div>
+  {% endblock %}

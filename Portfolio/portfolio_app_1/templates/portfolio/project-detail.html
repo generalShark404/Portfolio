@@ -1,78 +1,103 @@
-{% extends 'portfolio/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
 <div class="container mt-5">
-       <div class="row">
+
+
+  <div class="row">
+         <div class="d-flex justify-content-center col-lg-6 col-md-4 col-sm-4 col-xs-12 h-50 mb-5 "
+               >
+                 <div 
+                   class="w-100"
+                   style="position: relative; overflow: scroll; height: 400px;"
+
+                 >
+                 <div style="position: sticky; left: 0; top:0">                  
+                  <img
+                    src="{{ project.thumbnail_img.url}}" 
+                    style="height: 400px;
+                    width: 100%;
+                    object-fit: contain"
+                    id="main-image"
+                    class=""
+                  />
+                 </div>
+                   <div>
+                    
+                     <div class=" p-3" style="position: absolute; bottom: 0%;  display: flex; z-index: 5;" >
+                      {% for image in images %}
+                      <img  style="height: 50px; width: 50px;" src="{{image.image.url}}" class="me-1 side-image"/>
+                      {% endfor %}
+                      {% for image in images %}
+                      <img  style="height: 50px; width: 50px;" src="{{image.image.url}}" class="me-1 side-image"/>
+                      {% endfor %}
+                      {% for image in images %}
+                      <img  style="height: 50px; width: 50px;" src="{{image.image.url}}" class="me-1 side-image"/>
+                      {% endfor %}
+                      {% for image in images %}
+                      <img  style="height: 50px; width: 50px;" src="{{image.image.url}}" class="me-1 side-image"/>
+                      {% endfor %}
+                    </div>
+                   </div>
+                 </div>
+           </div>
         <!-- {/* Image Start*/} -->
         <!-- <div class="d-flex justify-content-center col-lg-6 col-md-4 col-sm-12 col-xs-12 h-50 mb-5 " -->
           
           <!-- <small class="text-small mb-5 mx-5 mt-1 bi bi-image "> project images</small> -->
-         <div
-          class="mb-0 col-sm-12 col-6 mx-5  rounded p-0 " style="display: flex;justify-content: center; align-items: center; box-shadow: 1px 1px 5px 1px grey; 
+         <!-- <div
+          class="mb-5 col-sm-12 col-6 mx-5  rounded p-0 " style="display: flex;justify-content: center; align-items: center; box-shadow: 1px 1px 5px 1px grey; 
           border-radius: 2px; height:300px; width: 300px; position: relative; overflow: scroll;" 
            >
-            <img  style="max-height: 80%; position: sticky; top: 0; left: 0;" src="{% static 'portfolio/img/prepAcademia.jpg' %}" class="img-fluid " id="main-image"/>
-            <div class=" p-3" style="position: absolute; bottom: 0%;  display: flex; z-index: 5;" >
-              <img  style="height: 50px; width: 50px;" src="{% static 'portfolio/img/prepAcademia2.png' %}" class="me-1 side-image"/>
-              <img  style="height: 50px; width: 50px;" src="{% static 'portfolio/img/prepAcademia.jpg' %}" class="me-1 side-image"/>
-            </div>
-          </div> 
+            <img  style="max-height: 80%; position: sticky; top: 0; left: 0;" src="{{ project.thumbnail_img.url}}" class="img-fluid " />
+
+            
+          </div>  -->
         
                  <!-- </div> -->
+                 <!-- Start -->
+                 
                  <div class="col-md-6 mt-0 mb-5">
-                     <h2 class="fw-old fs-3">Learner Management System</h2>
-                     <p> This is a comprehensive learner management system web application designed to streamline course management and optimize learning experiences.
-                     </p>
+                     <h2 class="fw-old fs-3">{{ project.title }}</h2>
                      <p>
-                       <span class="fw-bold text-dark fs-6">Technologies :</span>
-                       <span>Bootstrap, React, Django, Django Rest Framework, JWT Tokens </span>
+                      {{ project.description }}
                      </p>
+                    
+                     <p>
+                       <span class="fw-bold text-dark fs-6 mt-3">Technologies :</span>
+                       <span>{{ project.Technologies }} </span>
+                     </p>
+                    
                      <p>
                       <span class="fs-6 text-dark fw-bold">Status</span>:
                       <span class="badge text-bg-danger me-3">Not hosted</span> 
-                      <a class="bi bi-github bg-dark text-light p-2 rounded cursor-pointer" > Source Code</a>
+                      <a class="bi bi-github bg-dark text-light p-2 rounded cursor-pointer" href="{{ project.source_code }}"> Source Code</a>
                      </p>
-                     <div>
-                       <p class="fw-bold text-dark fs-5 mb-1">Features</p>
-                       <ul class="mt-0">
-                         <li>
-                           It has a student dashboard
-                         </li>
-                         <li>
-                           It has a student dashboard
-                         </li>
-                         <li>
-                           It has a student dashboard
-                         </li>
-                         <li>
-                           It has a student dashboard
-                         </li>
-                         <li>
-                           It has a student dashboard
-                         </li>
-                         <li>
-                           It has a student dashboard
-                         </li>
-                         <li>
-                           It has a student dashboard
-                         </li>
-                         <li>
-                           It has a student dashboard
-                         </li>
-                         <li>
-                           It has a student dashboard
-                         </li>
-                         <li>
-                           It has a student dashboard
-                         </li>
-                         <li>
-                           It has a student dashboard
-                         </li>
-                       </ul>
-                     </div>
-                     
-                 </div>
+                     <small class="mb-3">
+                      <span class="fw-bold text-dark">Date Created:</span>
+                      <span>{{ project.date_created }}</span>
+                    </small>
+                    
+                 </div>   
+
+
+                 <div class="mb-5 row">
+                  <p class="fw-bold text-dark fs-5 mb-1">Features</p>
+                  <div class="col-12">
+                    <div class="">                      
+                      {% for feature in features %}
+                      <p class="fs-4 text-dark ">{{ feature.header }}</p>
+                      <ul class="mt-0">
+                        <li >
+                         {{ feature.feature }}
+                        </li>
+                      </ul>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+                 <!-- End -->
           </div>
         <!-- {/* Image End*/} -->
        </div>
